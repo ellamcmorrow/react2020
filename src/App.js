@@ -9,9 +9,6 @@ import { useOnClickOutside } from "./hooks";
 function App() {
   const [open, setOpen] = useState(false);
 
-  const node = useRef();
-  useOnClickOutside(node, () => setOpen(false));
-
   return (
     <ThemeProvider theme={theme}>
       <>
@@ -21,10 +18,8 @@ function App() {
 
           <small>Ella McMorrow</small>
         </div>
-        <div ref={node}>
-          <Burger open={open} setOpen={setOpen} />
-          <Menu open={open} setOpen={setOpen} />
-        </div>
+        <Burger open={open} setOpen={setOpen} />
+        <Menu open={open} setOpen={setOpen} />
       </>
     </ThemeProvider>
   );
