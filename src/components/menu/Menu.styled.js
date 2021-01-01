@@ -4,13 +4,12 @@ import styled from "styled-components";
 export const StyledMenu = styled.nav`
   display: flex;
   width: 100%;
-  justify-content: left;
   background: #a89191;
   height: 100vh;
-  text-align: center;
   padding: 2rem;
-  padding-top: 200px;
   position: absolute;
+  align-items: center;
+  justify-content: center;
   top: 0;
   left: 0;
   transition: transform 0.5s ease-in-out;
@@ -21,12 +20,13 @@ export const StyledMenu = styled.nav`
   }
 
   a {
+    flex-direction: column;
     font-size: 1rem;
     text-transform: uppercase;
     padding: 1rem 0;
     font-weight: light;
     letter-spacing: 0.5rem;
-    color: ${({ theme }) => theme.primaryDark};
+    color: white;
     text-decoration: none;
     transition: color 0.3s linear;
 
@@ -36,7 +36,7 @@ export const StyledMenu = styled.nav`
     }
 
     &:hover {
-      color: ${({ theme }) => theme.primaryHover};
+      color: papayawhip;
     }
   }
 `;
